@@ -5,10 +5,10 @@ Get-Process "explorer"| Stop-Process
 
 #Changes Background  
 #URL For the Image of your choice (Wanna Cry Ransomware Background)
-$url = "blob:https://github.com/3fc820e9-1658-4a0b-adc0-8050866930f6"
+$url = "https://raw.githubusercontent.com/matteoporfi/tokens/refs/heads/main/rsm_bg.png"
 
 
-Invoke-WebRequest $url -OutFile %appdata%\test.jpg
+Invoke-WebRequest $url -OutFile %appdata%\test.png
 
 
 $setwallpapersrc = @"
