@@ -29,7 +29,7 @@ public class Wallpaper
 "@
 Add-Type -TypeDefinition $setwallpapersrc
 
-[Wallpaper]::SetWallpaper("C:\temp\test.png)
+[Wallpaper]::SetWallpaper("C:\temp\test.png")
 
 
 #Pop Up Message
