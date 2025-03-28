@@ -8,7 +8,7 @@ Get-Process "explorer"| Stop-Process
 $url = "https://raw.githubusercontent.com/matteoporfi/tokens/refs/heads/main/rsm_bg.jpg"
 
 
-Invoke-WebRequest $url -OutFile C:\temp\test.jpg
+Invoke-WebRequest $url -OutFile test.jpg
 
 
 $setwallpapersrc = @"
@@ -29,7 +29,7 @@ public class Wallpaper
 "@
 Add-Type -TypeDefinition $setwallpapersrc
 
-[Wallpaper]::SetWallpaper("C:\temp\test.jpg")
+[Wallpaper]::SetWallpaper("test.jpg")
 
 
 #Pop Up Message
