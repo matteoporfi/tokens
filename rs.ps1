@@ -7,8 +7,9 @@ Get-Process "explorer"| Stop-Process
 #URL For the Image of your choice (Wanna Cry Ransomware Background)
 $url = "https://raw.githubusercontent.com/matteoporfi/tokens/refs/heads/main/rsm_bg.jpg"
 
+New-Item -Path "C:\temp\" -Name "temp" -ItemType Directory
 
-Invoke-WebRequest $url -OutFile test.jpg
+Invoke-WebRequest $url -OutFile C:\temp\test.jpg
 
 
 $setwallpapersrc = @"
@@ -29,7 +30,7 @@ public class Wallpaper
 "@
 Add-Type -TypeDefinition $setwallpapersrc
 
-[Wallpaper]::SetWallpaper("test.jpg")
+[Wallpaper]::SetWallpaper("C:\temp\test.jpg")
 
 
 #Pop Up Message
