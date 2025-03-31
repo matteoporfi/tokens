@@ -1,4 +1,5 @@
-Set-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" -Name AutoRestartShell -Value 0
+$Path="HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
+Set-ItemProperty -Path $Path -Name "HideIcons" -Value 1
 Stop-Process -ProcessName explorer -Force
 
 #Changes Background  
